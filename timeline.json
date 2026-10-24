@@ -1,0 +1,57 @@
+[
+  {
+    "event_id": "TB-311",
+    "time": "13:01",
+    "event": "Successful sign-in from known device",
+    "source": "identity_log",
+    "status": "observed",
+    "evidence_gap": "User confirmation not collected",
+    "priority": "MEDIUM",
+    "interpretation": "Authentication succeeded on a known device; user intent is not verified.",
+    "next_step": "Confirm sign-in with the user and correlate IP, session, and authentication context."
+  },
+  {
+    "event_id": "TB-312",
+    "time": "13:04",
+    "event": "Permission settings opened",
+    "source": "admin_audit",
+    "status": "observed",
+    "evidence_gap": "No permission change recorded",
+    "priority": "MEDIUM",
+    "interpretation": "Permission settings were viewed; no permission change is recorded.",
+    "next_step": "Review surrounding admin audit events and determine which settings were accessed."
+  },
+  {
+    "event_id": "TB-313",
+    "time": "13:09",
+    "event": "Bulk report export requested",
+    "source": "report_service",
+    "status": "observed",
+    "evidence_gap": "Request status is queued",
+    "priority": "HIGH",
+    "interpretation": "A bulk export was requested and queued; this does not establish that data was exported.",
+    "next_step": "Inspect job state, queue history, scope, requester, and downstream execution logs."
+  },
+  {
+    "event_id": "TB-314",
+    "time": "13:11",
+    "event": "Export job cancelled",
+    "source": "report_service",
+    "status": "observed",
+    "evidence_gap": "No output file record",
+    "priority": "HIGH",
+    "interpretation": "The export job was cancelled and no output file record is listed in this evidence set.",
+    "next_step": "Verify cancellation completion and check storage, service, and audit logs for any partial output."
+  },
+  {
+    "event_id": "TB-315",
+    "time": "13:20",
+    "event": "Possible data access abuse",
+    "source": "analyst_hypothesis",
+    "status": "unconfirmed",
+    "evidence_gap": "Need completed-job and access logs",
+    "priority": "INVESTIGATE",
+    "interpretation": "Analyst hypothesis only; the supplied evidence does not establish data access abuse.",
+    "next_step": "Test the hypothesis against completed-job records, file access logs, object/storage logs, and network egress telemetry."
+  }
+]

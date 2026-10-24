@@ -1,0 +1,6 @@
+event_id,time,event,source,status,evidence_gap
+TB-311,13:01,Successful sign-in from known device,identity_log,observed,User confirmation not collected
+TB-312,13:04,Permission settings opened,admin_audit,observed,No permission change recorded
+TB-313,13:09,Bulk report export requested,report_service,observed,Request status is queued
+TB-314,13:11,Export job cancelled,report_service,observed,No output file record
+TB-315,13:20,Possible data access abuse,analyst_hypothesis,unconfirmed,Need completed-job and access logs
