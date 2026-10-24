@@ -1,0 +1,5 @@
+event_id,time,risk_score,risk_level,reasons,analyst_note
+B-211,11:02,0,LOW,No configured indicators,Usual device and location
+B-212,11:06,65,HIGH,Unrecognized device (+15); Location differs from normal activity (+15); MFA authentication failed (+20); Account recovery page accessed (+15),MFA failed; recovery page viewed
+B-213,11:08,60,HIGH,Unrecognized device (+15); Location differs from normal activity (+15); MFA passed despite an unusual context (+5); Recovery email change requested; completion unconfirmed (+25),Request observed; completion not confirmed
+B-214,11:16,0,LOW,No configured indicators,Later familiar sign-in; user confirmation unavailable
